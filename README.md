@@ -55,6 +55,14 @@ This is my buid DWM - Dynamic Tiling Window Manager. In my opinion it is one of 
 * dwm-focusmaster-20210804-138b405.diff
 * dwm-alwayscenter-20200625-f04cac6.diff
 
+## Packages [Ubuntu]
+* Thunar
+* Pavucontrol
+* Xfce4-screenShooter
+* Firefox
+* Dunst
+* Nitogren
+
 ## Layouts
 This build has following layouts
 * Tiling
@@ -97,6 +105,7 @@ MODKEY = Super Key | Win Key
 | MODKEY  + h  | Decrease Master Width|
 | MODKEY  + j  | Focus Previous Tile|
 | MODKEY  + k  | Foucs Next tile|
+| MODKEY  + Shift + x  | Xkill |
 | MODKEY  + Shift + j  | Move Position Next tile|
 | MODKEY  + Shift + k  | Move Position Previous Tile|
 | MODKEY  + Enter  | Make the select stack tile Master|
