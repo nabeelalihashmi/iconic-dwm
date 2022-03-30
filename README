@@ -1,22 +1,9 @@
 # DWM - Icon's Build
+This is my buid DWM - Dynamic Tiling Window Manager. In my opinion it is one of the best tiling window managers. The only downside, is it's modification. The patching system is very weird and users require to edit code manually and place failed patches.
 
-## Patches
-### Downloaded
-* dwm-attachbottom-6.2.diff
-* dwm-autostart-20210120-cb3f58a.diff  
-* dwm-columns-6.2.diff                  
-* dwm-cfacts-vanitygaps-6.2_combo.diff 
-* dwm-pertag-20200914-61bb8b2.diff
-* dwm-focusmaster-20210804-138b405.diff 
-* dwm-systray-6.3.diff
-* dwm-gridmode-20170909-ceac8c9.diff
-* dwm-colorbar-6.2.diff                
-* dwm-movestack-20211115-a786211.diff
-
-
-### Applied
+## Patches Applied
 * dwm-attachbottom-6.2.diff 
-* dwm-autostart-20210120-cb3f58a.di
+* dwm-autostart-20210120-cb3f58a.diff
 * dwm-columns-6.2.diff 
 * dwm-cfacts-vanitygaps-6.2_combo.diff
 * dwm-pertag-20200914-61bb8b2.diff
@@ -25,52 +12,62 @@
 * dwm-movestack-20211115-a786211.diff
 * dwm-colorbar-6.2.diff 
 * dwm-focusmaster-20210804-138b405.diff
-  
-dwm - dynamic window manager
-============================
-dwm is an extremely fast, small, and dynamic window manager for X.
+
+## Layouts
+This build has following layouts
+* Tiling
+* Floating
+* Monocle
+* Grid
+* Column
+
+## Autostart
+This build has autostart patch applied. This is helpful in running script for startup. The file required is
+
+```
+~/.dwm/autostart.sh
+```
+
+Example:
+```
+#!/bin/bash
+nitrogen --restore &
+nm-applet &
+enable_touch.sh &
+```
+
+## Keys
+MODKEY = Super Key | Win Key
 
 
-Requirements
-------------
-In order to build dwm you need the Xlib header files.
+| Key  | Function  |
+|---|---|
+| MODKEY + Shift + Enter  | Open Terminal [Alacritty]   |
+| MODKEY + [1..8]  | Switch Tag   |
+| MODKEY + Shift + [1..8]  | Move Window to Tag   |
+| MODKEY + Shift + c  | Kill Window   |
+| MODKEY  + t  | Tiling Layout   |
+| MODKEY  + f  | Floating Layout   |
+| MODKEY  + c  | Column Layout   |
+| MODKEY  + g  | Grid Layout   |
+| MODKEY  + m  | Mocole Layout   |
+| MODKEY  + l  | Incrase Master Width  |
+| MODKEY  + h  | Decrease Master Width|
+| MODKEY  + j  | Focus Previous Tile|
+| MODKEY  + k  | Foucs Next tile|
+| MODKEY  + Shift + j  | Move Position Next tile|
+| MODKEY  + Shift + k  | Move Position Previous Tile|
+| MODKEY  + Enter  | Make the select stack tile Master|
+| MODKEY  +  Shift +  h  | Increase Stack Tile Height|
+| MODKEY  +  Shift +  l |  Decrase Stack Tile Height|
+| MODKEY  + i  | [^1] Increment Clients in Master   |
+| MODKEY  + d  | [^2] Decrement Clients in Master   |
+| MODKEY  + d  | Decrement Layout   |
+| MODKEY  + d  | Decrement Layout   |
+| MODKEY  + d  | Decrement Layout   |
+| MODKEY  + d  | Decrement Layout   |
+| MODKEY  + d  | Decrement Layout   |
+| MODKEY + Control  + 0  | Enable Disable Gaps   |
 
 
-Installation
-------------
-Edit config.mk to match your local setup (dwm is installed into
-the /usr/local namespace by default).
-
-Afterwards enter the following command to build and install dwm (if
-necessary as root):
-
-    make clean install
-
-
-Running dwm
------------
-Add the following line to your .xinitrc to start dwm using startx:
-
-    exec dwm
-
-In order to connect dwm to a specific display, make sure that
-the DISPLAY environment variable is set correctly, e.g.:
-
-    DISPLAY=foo.bar:1 exec dwm
-
-(This will start dwm on display :1 of the host foo.bar.)
-
-In order to display status info in the bar, you can do something
-like this in your .xinitrc:
-
-    while xsetroot -name "`date` `uptime | sed 's/.*,//'`"
-    do
-    	sleep 1
-    done &
-    exec dwm
-
-
-Configuration
--------------
-The configuration of dwm is done by creating a custom config.h
-and (re)compiling the source code.
+[^1]. Number of columns in Column Layout. Last is stacked like tile.
