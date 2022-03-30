@@ -109,6 +109,3 @@ MODKEY = Super Key | Win Key
 | MODKEY  + d  | Decrement Layout   |
 | MODKEY  + d  | Decrement Layout   |
 | MODKEY + Control  + 0  | Enable Disable Gaps   |
-
-
-[^1]. Number of columns in Column Layout. Last is stacked like tile.
