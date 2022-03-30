@@ -1,7 +1,18 @@
 # DWM - Icon's Build
 
 ## Patches
-* 
+* dwm-attachbottom-6.2.diff
+* dwm-columns-6.2.diff                  
+* dwm-pertag-20200914-61bb8b2.diff
+* dwm-autostart-20210120-cb3f58a.diff  
+* dwm-focusmaster-20210804-138b405.diff 
+* dwm-systray-6.3.diff
+* dwm-cfacts-vanitygaps-6.2_combo.diff 
+* dwm-gridmode-20170909-ceac8c9.diff
+* dwm-colorbar-6.2.diff                
+* dwm-movestack-20211115-a786211.diff
+
+
 
 dwm - dynamic window manager
 ============================
