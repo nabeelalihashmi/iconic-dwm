@@ -123,7 +123,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = browsercmd} },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          {.v = filemanagercmd} },
-	{ MODKEY|ShiftMask,             XK_z,      spawn,          {.v = xkillcmd} },
+	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = xkillcmd} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },

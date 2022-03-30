@@ -28,7 +28,7 @@ This is my buid DWM - Dynamic Tiling Window Manager. In my opinion it is one of 
 ### Columns Layout - MODKEY + C
 * MODKEY + i to increase clients in master stack
 * MODKEY + d to increase clients in master stack
-
+>
 ![Home Screen, Simple and Beautiful](./screenshots/5.png "Home Screen, Simple and Beautiful")
 
 ![Home Screen, Simple and Beautiful](./screenshots/6.png "Home Screen, Simple and Beautiful")
@@ -44,7 +44,7 @@ This is my buid DWM - Dynamic Tiling Window Manager. In my opinion it is one of 
 
 ## Patches Applied
 * dwm-attachbottom-6.2.diff 
-* dwm-autostart-20210120-cb3f58a.diff
+* dwm-autostart-20210120-cb3f58a.diffXX
 * dwm-columns-6.2.diff 
 * dwm-cfacts-vanitygaps-6.2_combo.diff
 * dwm-pertag-20200914-61bb8b2.diff
@@ -62,6 +62,7 @@ This is my buid DWM - Dynamic Tiling Window Manager. In my opinion it is one of 
 * Firefox
 * Dunst
 * Nitogren
+* Pasystray
 
 ## Layouts
 This build has following layouts
