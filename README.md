@@ -4,6 +4,8 @@
 
 Patched by :  [Nabeel Ali - https://iconiccodes.com](https://iconiccodes.com)
 
+![Demo](./screenshots/tunaktunak.gif "Demo")
+
 </div>
 
 ## Why I needed that?
