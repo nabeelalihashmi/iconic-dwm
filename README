@@ -1,5 +1,44 @@
 # DWM - Icon's Build
+
+<div style="background-color: #222; color: red; border: 1px solid; padding: 10px; margin-bottom: 10px; display: flex; justify-content: center; align-items: center;padding-bottom:4px;font-weight: bold">
+
+Patched by :  [Nabeel Ali - https://iconiccodes.com](https://iconiccodes.com)
+
+</div>
+
+## Why I needed that?
 This is my buid DWM - Dynamic Tiling Window Manager. In my opinion it is one of the best tiling window managers. The only downside, is it's modification. The patching system is very weird and users require to edit code manually and place failed patches.
+
+## Screenshots
+
+### Home
+![Home Screen, Simple and Beautiful](./screenshots/1.png "Home Screen, Simple and Beautiful")
+
+![Home Screen, Simple and Beautiful](./screenshots/2.png "Home Screen, Simple and Beautiful")
+
+### Default Layout - Tiling - MODKEY + T
+
+![Home Screen, Simple and Beautiful](./screenshots/3.png "Home Screen, Simple and Beautiful")
+
+### Grid Layout - MODKEY + G
+![Home Screen, Simple and Beautiful](./screenshots/4.png "Home Screen, Simple and Beautiful")
+
+### Columns Layout - MODKEY + C
+* MODKEY + i to increase clients in master stack
+* MODKEY + d to increase clients in master stack
+
+![Home Screen, Simple and Beautiful](./screenshots/5.png "Home Screen, Simple and Beautiful")
+
+![Home Screen, Simple and Beautiful](./screenshots/6.png "Home Screen, Simple and Beautiful")
+
+### Floating - MODKEY + F | MODKEY + Shift + Space for single window in Tiling mode
+
+* MODKEY + Left Click  and Drag to move
+* MODKEY + Right Click Drag to resize
+
+![Home Screen, Simple and Beautiful](./screenshots/7.png "Home Screen, Simple and Beautiful")
+
+
 
 ## Patches Applied
 * dwm-attachbottom-6.2.diff 
