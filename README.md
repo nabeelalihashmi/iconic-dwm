@@ -1,6 +1,6 @@
 # DWM - Icon's Build
 
-<div style="background-color: #222; color: red; border: 1px solid; padding: 10px; margin-bottom: 10px; display: flex; justify-content: center; align-items: center;padding-bottom:4px;font-weight: bold">
+<div style="background-color: #222; color: red; border: 1px solid; padding: 10px; margin-bottom: 10px; display: flex; justify-content: center; align-items: center;padding-bottom:4px;font-weight: bold; flex-direction: column;">
 
 Patched by :  [Nabeel Ali - https://iconiccodes.com](https://iconiccodes.com)
 
