@@ -55,7 +55,7 @@ This is my buid DWM - Dynamic Tiling Window Manager. In my opinion it is one of 
 * dwm-focusmaster-20210804-138b405.diff
 * dwm-alwayscenter-20200625-f04cac6.diff
 
-## Packages [Ubuntu]
+## Packages I use [Ubuntu]
 * Thunar
 * Pavucontrol
 * Xfce4-screenShooter
@@ -63,6 +63,9 @@ This is my buid DWM - Dynamic Tiling Window Manager. In my opinion it is one of 
 * Dunst
 * Nitogren
 * Pasystray
+* Blueman Applet
+* Nm-applet
+* Clipit
 
 ## Layouts
 This build has following layouts

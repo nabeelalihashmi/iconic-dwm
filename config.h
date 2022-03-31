@@ -86,9 +86,10 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const char *browsercmd[]  = { "firefox", NULL };
 static const char *filemanagercmd[]  = { "thunar", NULL };
 static const char *volctrlcmd[]  = { "pavucontrol", NULL };
-static const char *scrshotfscmd[]  = { "xfce4-screenshooter", "-f" };
-static const char *scrshotselcmd[]  = { "xfce4-screenshooter", "-r" };
-static const char *scrshotwincmd[]  = { "xfce4-screenshooter", "-w" };
+static const char *scrshotcmd[]  = { "xfce4-screenshooter", NULL };
+static const char *scrshotfscmd[]  = { "xfce4-screenshooter", "-f", NULL };
+static const char *scrshotselcmd[]  = { "xfce4-screenshooter", "-r", NULL };
+static const char *scrshotwincmd[]  = { "xfce4-screenshooter", "-w", NULL };
 static const char *xkillcmd[]  =      { "xkill", NULL};
 static const char *volume[3][4] = { {
     "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+10%"
@@ -114,16 +115,17 @@ static Key keys[] = {
 	{0,									  XF86XK_MonBrightnessUp,   spawn,  {.v=brightness[0] }},
    {0,									  XF86XK_MonBrightnessDown, spawn,  {.v=brightness[1] }},
 
-	{ 0,          						  XK_Print,  spawn,          {.v = scrshotfscmd } },
-	{ MODKEY,          				  XK_Print,  spawn,          {.v = scrshotselcmd } },
+	{ 0,          						  XK_Print,  spawn,          {.v = scrshotcmd } },
+	{ ShiftMask,						  XK_Print,  spawn,          {.v = scrshotfscmd } },
+	{ MODKEY|ControlMask,           XK_Print,  spawn,          {.v = scrshotselcmd } },
 	{ MODKEY|ShiftMask,				  XK_Print,  spawn,          {.v = scrshotwincmd } },
 	{ MODKEY|ShiftMask,			     XK_v,      spawn,          {.v = volctrlcmd } },
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = browsercmd} },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          {.v = filemanagercmd} },
-	{ MODKEY|ShiftMask,             XK_z,      spawn,          {.v = xkillcmd} },
+	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = xkillcmd} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
@@ -140,12 +142,12 @@ static Key keys[] = {
 	{ MODKEY|ControlMask|ShiftMask,    XK_0,      defaultgaps,    {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
+	{ Mod1Mask,                     XK_F4,     killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_c,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[4]} },
-	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
@@ -162,7 +164,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ Mod1Mask|ControlMask,         XK_BackSpace,      quit,           {0} },
 };
 
 /* button definitions */
