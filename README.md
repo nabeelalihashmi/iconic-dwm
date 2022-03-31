@@ -54,6 +54,7 @@ This is my buid DWM - Dynamic Tiling Window Manager. In my opinion it is one of 
 * dwm-colorbar-6.2.diff 
 * dwm-focusmaster-20210804-138b405.diff
 * dwm-alwayscenter-20200625-f04cac6.diff
+* dwm-sticky-6.1.diff
 
 ## Packages I use [Ubuntu]
 * Thunar
