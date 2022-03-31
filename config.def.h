@@ -3,6 +3,8 @@
 
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int dmenulines  = 20;        /* border pixel of windows */
+static const unsigned int dmenug      = 4;        /* border pixel of windows */
 static const unsigned int snap      = 32;
 static const unsigned int gappih    = 4;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 4;       /* vert inner gap between windows */
@@ -81,7 +83,10 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+// ❯ dmenu_run -c -bw 2 -l 20 -g 4 -sb "#ff0000"
+// static const char *dmenucmd[] = {"dmenu_run -c -bw  2 -l  20 -g  4" , "-fn", dmenufont, "-sb", col_cyan };
+// static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, "-bw", "3" , "-l", "20", "-g", "3", "-c" ,NULL};
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *browsercmd[]  = { "firefox", NULL };
 static const char *filemanagercmd[]  = { "thunar", NULL };
