@@ -60,6 +60,9 @@ This is my buid DWM - Dynamic Tiling Window Manager. In my opinion it is one of 
 * Thunar
 * Pavucontrol
 * Xfce4-screenShooter
+* Xfce4-screensaver
+* Xfce4-powermanager
+* Upower
 * Firefox
 * Dunst
 * Nitogren
