@@ -56,17 +56,16 @@ This is my buid DWM - Dynamic Tiling Window Manager. In my opinion it is one of 
 * dwm-alwayscenter-20200625-f04cac6.diff
 * dwm-sticky-6.1.diff
 
-## Packages I use [Ubuntu]
+## Packages Recommened [Ubuntu]
 * Thunar
 * Pavucontrol
 * Xfce4-screenShooter
-* Xfce4-screensaver
-* Xfce4-powermanager
-* Upower
-* Firefox
+* Slock
+* Xss Lock
+* St
+* Firefox, Google Chrome and Surf
 * Dunst
 * Nitogren
-* Pasystray
 * Blueman Applet
 * Nm-applet
 * Clipit
@@ -95,6 +94,9 @@ enable_touch.sh &
 ```
 
 ## Keys
+
+Check `config.def.h` for keys.
+
 MODKEY = Super Key | Win Key
 
 
@@ -103,7 +105,8 @@ MODKEY = Super Key | Win Key
 | MODKEY + Shift + Enter  | Open Terminal [Alacritty]   |
 | MODKEY + [1..8]  | Switch Tag   |
 | MODKEY + Shift + [1..8]  | Move Window to Tag   |
-| MODKEY + Shift + c  | Kill Window   |
+| MODKEY + Shift + q  | Kill Window   |
+| Alt + F4  | Kill Window   |
 | MODKEY  + t  | Tiling Layout   |
 | MODKEY  + f  | Floating Layout   |
 | MODKEY  + c  | Column Layout   |
@@ -126,4 +129,5 @@ MODKEY = Super Key | Win Key
 | MODKEY  + d  | Decrement Layout   |
 | MODKEY  + d  | Decrement Layout   |
 | MODKEY  + d  | Decrement Layout   |
+| Alt + Ctrl  + Backspace  | Quit   |
 | MODKEY + Control  + 0  | Enable Disable Gaps   |

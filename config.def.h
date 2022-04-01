@@ -98,6 +98,8 @@ static const char *scrshotfscmd[]  = { "xfce4-screenshooter", "-f", NULL };
 static const char *scrshotselcmd[]  = { "xfce4-screenshooter", "-r", NULL };
 static const char *scrshotwincmd[]  = { "xfce4-screenshooter", "-w", NULL };
 static const char *xkillcmd[]  =      { "xkill", NULL};
+static const char *xtrlockcmd[]  =      { "xtrlock", NULL};
+static const char *slockcmd[]  =      { "slock", NULL};
 static const char *volume[3][4] = { {
     "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+10%"
   },{
@@ -133,6 +135,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = browsercmd} },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          {.v = filemanagercmd} },
 	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = xkillcmd} },
+	{ Mod1Mask|ControlMask,			  XK_l,      spawn,          {.v = slockcmd} },
+	{ Mod1Mask|ControlMask|ShiftMask,XK_l,      spawn,          {.v = xtrlockcmd} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
