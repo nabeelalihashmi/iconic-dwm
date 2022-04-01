@@ -69,6 +69,7 @@ This is my buid DWM - Dynamic Tiling Window Manager. In my opinion it is one of 
 * Blueman Applet
 * Nm-applet
 * Clipit
+* Lxpolkit
 
 ## Layouts
 This build has following layouts
