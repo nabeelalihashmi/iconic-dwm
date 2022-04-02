@@ -49,6 +49,9 @@ static const Rule rules[] = {
 	{ "Firefox",     NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "Pavucontrol", NULL,       NULL,       0,            1,           -1 },
 	{ "Thunar",      NULL,       NULL,       0,            1,           -1 },
+	{ "SimpleScreenRecorder",      NULL,       NULL,       0,            1,           -1 },
+	{ "Nitrogen",      NULL,       NULL,       0,            1,           -1 },
+	{ "Lxappearance",      NULL,       NULL,       0,            1,           -1 },
 
 };
 
@@ -100,26 +103,24 @@ static const char *scrshotwincmd[]  = { "xfce4-screenshooter", "-w", NULL };
 static const char *xkillcmd[]  =      { "xkill", NULL};
 static const char *xtrlockcmd[]  =      { "xtrlock", NULL};
 static const char *slockcmd[]  =      { "slock", NULL};
-static const char *volume[3][4] = { {
-    "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+10%"
-  },{
-    "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-10%"
-  },{
-    "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle"
-  } 
-};
-static const char *brightness[2][2] = {
-	{"brightness_push", "up"},
-	{"brightness_push", "down"}
-};
+static const char *volupcmd[] = 	{"pactl", "set-sink-volume", "@DEFAULT_SINK@", "+10%", NULL};
+static const char *voldowncmd[] = {"pactl", "set-sink-volume", "@DEFAULT_SINK@", "-10%", NULL};
+static const char *voltoggcmd[] = {"pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL};
+
+static const char *brightness_up[] = {"sudo", "brightnessctl", "set", "+10%",  "-n", "2", NULL};
+static const char *brightness_down[] = {"sudo", "brightnessctl", "set", "10%-","-n", "2", NULL};
+static const char *powermenu[] = {"sessionmenu", NULL};
 
 #include "movestack.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 
-	{0,									  XF86XK_AudioRaiseVolume, spawn,   {.v=volume[0] }},
-	{0,									  XF86XK_AudioLowerVolume, spawn,   {.v=volume[1] }},
-	{0,									  XF86XK_AudioMute,        spawn,   {.v=volume[2] }},
+	{MODKEY|ShiftMask, 					XK_F3, 			spawn,   {.v = volupcmd }},
+	{MODKEY|ShiftMask, 					XK_F2, 			spawn,   {.v = voldowncmd }},
+	{MODKEY|ShiftMask, 					XK_F1,        	spawn,   {.v = voltoggcmd }},
+
+	{MODKEY|ShiftMask, 					XK_F11,        	spawn,   {.v = brightness_down }},
+	{MODKEY|ShiftMask, 					XK_F12,        	spawn,   {.v = brightness_up }},
 
 
 	{ 0,          						  XK_Print,  spawn,          {.v = scrshotcmd } },
@@ -127,10 +128,11 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,           XK_Print,  spawn,          {.v = scrshotselcmd } },
 	{ MODKEY|ShiftMask,				  XK_Print,  spawn,          {.v = scrshotwincmd } },
 	{ MODKEY|ShiftMask,			     XK_v,      spawn,          {.v = volctrlcmd } },
-	{ MODKEY,                       XK_p,      spawn,              {.v = dmenucmd } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = powermenu } },
 	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY|ShiftMask,             XK_t, spawn,          {.v = alaccmd } },
+	{ MODKEY|ShiftMask,             XK_t, 		 spawn,          {.v = alaccmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = browsercmd} },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          {.v = filemanagercmd} },
