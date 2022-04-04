@@ -110,6 +110,7 @@ static const char *voltoggcmd[] = {"pactl", "set-sink-mute", "@DEFAULT_SINK@", "
 static const char *brightness_up[] = {"sudo", "brightnessctl", "set", "+10%",  "-n", "2", NULL};
 static const char *brightness_down[] = {"sudo", "brightnessctl", "set", "10%-","-n", "2", NULL};
 static const char *powermenu[] = {"sessionmenu", NULL};
+static const char *socialmenu[] = {"socialmenu", NULL};
 
 #include "movestack.c"
 static Key keys[] = {
@@ -128,6 +129,7 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,           XK_Print,  spawn,          {.v = scrshotselcmd } },
 	{ MODKEY|ShiftMask,				  XK_Print,  spawn,          {.v = scrshotwincmd } },
 	{ MODKEY|ShiftMask,			     XK_v,      spawn,          {.v = volctrlcmd } },
+	{ MODKEY|ShiftMask,			     XK_s,      spawn,          {.v = socialmenu } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = powermenu } },
 	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
