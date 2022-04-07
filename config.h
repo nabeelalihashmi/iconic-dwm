@@ -46,9 +46,8 @@ static const Rule rules[] = {
 	 */
 	/* class         instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",        NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",     NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "Pavucontrol", NULL,       NULL,       0,            1,           -1 },
-	{ "Thunar",      NULL,       NULL,       0,            1,           -1 },
+	{ "Pcmanfm",      NULL,       NULL,       0,            1,           -1 },
 	{ "SimpleScreenRecorder",      NULL,       NULL,       0,            1,           -1 },
 	{ "Nitrogen",      NULL,       NULL,       0,            1,           -1 },
 	{ "Lxappearance",      NULL,       NULL,       0,            1,           -1 },
@@ -94,7 +93,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL};
 static const char *termcmd[]  = { "st", NULL };
 static const char *alaccmd[]  = { "alacritty", NULL };
 static const char *browsercmd[]  = { "firefox", NULL };
-static const char *filemanagercmd[]  = { "thunar", NULL };
+static const char *filemanagercmd[]  = { "pcmanfm", NULL };
 static const char *volctrlcmd[]  = { "pavucontrol", NULL };
 static const char *scrshotcmd[]  = { "xfce4-screenshooter", NULL };
 static const char *scrshotfscmd[]  = { "xfce4-screenshooter", "-f", NULL };
