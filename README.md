@@ -43,18 +43,25 @@ This is my buid DWM - Dynamic Tiling Window Manager. In my opinion it is one of 
 
 
 ## Patches Applied
-* dwm-attachbottom-6.2.diff 
-* dwm-autostart-20210120-cb3f58a.diffXX
-* dwm-columns-6.2.diff 
-* dwm-cfacts-vanitygaps-6.2_combo.diff
-* dwm-pertag-20200914-61bb8b2.diff
-* dwm-systray-6.3.diff 
-* dwm-gridmode-20170909-ceac8c9.diff
-* dwm-movestack-20211115-a786211.diff
-* dwm-colorbar-6.2.diff 
+* dwm-actualfullscreen-20211013-cb3f58a.diff
 * dwm-focusmaster-20210804-138b405.diff
 * dwm-alwayscenter-20200625-f04cac6.diff
+* dwm-gridmode-20170909-ceac8c9.diff
+* dwm-attachbottom-6.2.diff
+* dwm-hide_vacant_tags-6.3.diff
+* dwm-autostart-20210120-cb3f58a.diff
+* dwm-movestack-20211115-a786211.diff
+* dwm-bottomstack-6.1.diff
+* dwm-pertag-20200914-61bb8b2.diff
+* dwm-cfacts-vanitygaps-6.2_combo.diff
+* dwm-savefloats-6.0.diff
+* dwm-colorbar-6.2.diff
 * dwm-sticky-6.1.diff
+* dwm-columns-6.0.diff
+* dwm-swallow-20201211-61bb8b2.diff
+* dwm-fixborders-6.2.diff
+* dwm-systray-6.3.diff
+
 
 ## Packages Recommened [Ubuntu]
 * Thunar
@@ -67,9 +74,13 @@ This is my buid DWM - Dynamic Tiling Window Manager. In my opinion it is one of 
 * Dunst
 * Nitogren
 * Blueman Applet
-* Nm-applet
-* Clipit
+* NetworkManager
+* Copyq
 * Lxpolkit
+* SDDM
+* LXAppearance
+* Kvantum
+* QT5CT
 
 ## Layouts
 This build has following layouts
@@ -78,6 +89,9 @@ This build has following layouts
 * Monocle
 * Grid
 * Column
+* Full Screen
+* Bottom Stack
+* Deck
 
 ## Autostart
 This build has autostart patch applied. This is helpful in running script for startup. The file required is
